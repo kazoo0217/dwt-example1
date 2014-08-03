@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+@@(_document['sub-category'])@@
+<!-- TemplateBeginIf cond="(_document['sub-category'])!=''" --> | <!-- TemplateEndIf -->
+@@(_document['category'])@@
+<!-- TemplateBeginIf cond="(_document['category'])!=''" --> | <!-- TemplateEndIf -->
+@@(_document['home'])@@
+</title>
+<!-- TemplateBeginEditable name="doctitle" -->
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../css/demo.css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!-- Parameter -->
+<!-- TemplateParam name="home" type="text" value="" -->
+<!-- TemplateParam name="category" type="text" value="" -->
+<!-- TemplateParam name="sub-category" type="text" value="" -->
+</head>
+
+<body>
+
+<nav class="bread">
+  <ul>
+    <li><a href="../index.html">@@(_document['home'])@@</a></li>
+    <!-- TemplateBeginIf cond="(_document['category'])!=''" --><li> &gt; <a href="./index.html">@@(_document['category'])@@</a></li><!-- TemplateEndIf -->
+    <!-- TemplateBeginIf cond="(_document['sub-category'])!=''" --><li> &gt; @@(_document['sub-category'])@@</li><!-- TemplateEndIf -->
+  </ul>
+</nav>
+
+<!-- TemplateBeginEditable name="EditRegionMain" -->
+EditRegionMain
+<!-- TemplateEndEditable -->
+</body>
+</html>
